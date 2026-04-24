@@ -1,4 +1,4 @@
-const featuredProjects = [
+const publicApps = [
   {
     title: 'Stupid Small',
     description:
@@ -6,16 +6,31 @@ const featuredProjects = [
     tags: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'Groq', 'Cloudflare Workers'],
   },
   {
-    title: 'QA Error Detection Model',
-    description:
-      'Sanitized case study placeholder for a predictive model used to identify compliance and procedural errors in dispute workflows before they became larger operational problems.',
-    tags: ['Python', 'XGBoost', 'Compliance', 'Model Risk Management'],
-  },
-  {
     title: 'Niner',
     description:
       'A polished native Android Sudoku app with five difficulties, five game modes, a daily streak puzzle, and a teaching hint engine, all built end-to-end in Kotlin and Jetpack Compose.',
-    tags: ['Kotlin', 'Jetpack Compose', 'StateFlow', 'Coroutines', 'Custom Canvas', 'On-device App'],
+    tags: ['Kotlin', 'Jetpack Compose', 'StateFlow', 'Coroutines', 'Custom Canvas', 'On-device'],
+  },
+]
+
+const dataScienceProjects = [
+  {
+    title: 'Customer Churn Prediction',
+    description:
+      'Planned portfolio project using public customer data to identify churn risk, compare baseline and tree-based models, and translate model output into retention recommendations.',
+    tags: ['Python', 'Pandas', 'Scikit-learn', 'Classification', 'Feature Importance'],
+  },
+  {
+    title: 'Loan Default Risk Modeling',
+    description:
+      'Planned public risk-modeling case study focused on class imbalance, model interpretability, and decision-oriented evaluation for lending-style workflows.',
+    tags: ['Python', 'Risk Analytics', 'ROC-AUC', 'Precision/Recall', 'Interpretability'],
+  },
+  {
+    title: 'A/B Test Analysis',
+    description:
+      'Planned experimentation case study focused on conversion lift, confidence intervals, practical significance, and clear recommendation writing for stakeholders.',
+    tags: ['Statistics', 'Experimentation', 'Hypothesis Testing', 'Business Analytics'],
   },
 ]
 
@@ -24,9 +39,9 @@ const experience = [
     title: 'Data Scientist, AVP — PNC Financial Services',
     meta: '2025 – Present',
     bullets: [
-      'Built predictive models for compliance and procedural error detection in Reg E disputes.',
-      'Designed statistical sampling frameworks to improve QA coverage and audit defensibility.',
-      'Created executive-facing Tableau dashboards for dispute monitoring, compliance trends, and performance visibility.',
+      'Built predictive models and statistical frameworks to improve decision-making in regulated banking operations.',
+      'Designed analytical workflows to improve QA coverage, audit defensibility, and operational visibility.',
+      'Created executive-facing Tableau dashboards for monitoring trends, risk patterns, and team performance.',
     ],
   },
   {
@@ -51,12 +66,26 @@ const experience = [
 
 const stacks = {
   platforms: ['Python', 'SQL', 'PySpark', 'Hive', 'Teradata', 'Oracle'],
-  modeling: ['XGBoost', 'Scikit-learn', 'Classification', 'Sampling', 'Feature Engineering'],
+  modeling: ['Scikit-learn', 'Classification', 'Sampling', 'Feature Engineering', 'A/B Testing'],
   storytelling: ['Tableau', 'Executive Dashboards', 'Data Storytelling', 'Operations Metrics'],
 }
 
 function Pill({ text }: { text: string }) {
   return <span className="pill">{text}</span>
+}
+
+function ProjectCard({ title, description, tags }: { title: string; description: string; tags: string[] }) {
+  return (
+    <article className="card tile">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <div className="pillRow">
+        {tags.map((tag) => (
+          <Pill key={tag} text={tag} />
+        ))}
+      </div>
+    </article>
+  )
 }
 
 export default function HomePage() {
@@ -66,8 +95,8 @@ export default function HomePage() {
         <div className="wrap navInner">
           <div className="brand">Raymond Jack</div>
           <div className="navLinks">
-            <a href="#projects">Projects</a>
-            <a href="#dashboards">Dashboards</a>
+            <a href="#apps">Apps</a>
+            <a href="#data-science">Data Science</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </div>
@@ -78,15 +107,13 @@ export default function HomePage() {
         <div className="heroGrid">
           <section>
             <div className="eyebrow">Data Scientist • Banking Analytics • Tableau • Python • SQL</div>
-            <h1>I build models, dashboards, and analytics that help teams make better decisions.</h1>
+            <h1>I turn data into practical decisions, and I build products too.</h1>
             <p className="lede">
-              I&apos;m Raymond Jack, a data scientist with deep experience in banking, compliance, disputes,
-              consumer lending, and executive-facing analytics. My work spans predictive modeling,
-              production-grade data pipelines, and dashboards that turn messy operations into clear decisions.
+              I&apos;m Raymond Jack, a data scientist with deep experience in banking, analytics, risk-focused decision support, and executive-facing dashboards. This portfolio combines public app work with data science projects built to show how I approach real business problems.
             </p>
             <div className="ctaRow">
-              <a className="btn primary" href="#projects">
-                View portfolio
+              <a className="btn primary" href="#data-science">
+                View projects
               </a>
               <a className="btn secondary" href="mailto:rayjackcb@gmail.com">
                 Contact me
@@ -109,61 +136,57 @@ export default function HomePage() {
                 <span>enterprise modeling competition, 2 years in a row</span>
               </div>
               <div className="stat">
-                <strong>SQL / Python / Tableau</strong>
-                <span>core toolkit</span>
+                <strong>2 apps</strong>
+                <span>public product work already live in the portfolio</span>
               </div>
               <div className="stat">
-                <strong>Remote-ready</strong>
-                <span>open to full-time or contract roles</span>
+                <strong>3 planned DS projects</strong>
+                <span>public datasets focused on churn, risk, and experimentation</span>
               </div>
             </div>
           </aside>
         </div>
       </header>
 
-      <section id="projects" className="wrap sectionBlock">
+      <section id="apps" className="wrap sectionBlock">
         <div className="sectionHead">
-          <h2>Featured work</h2>
-          <p>A mix of public product work and professional analytics case studies.</p>
+          <h2>Public apps</h2>
+          <p>Shipped projects that demonstrate product thinking, native app development, and execution.</p>
         </div>
-        <div className="grid3">
-          {featuredProjects.map((project) => (
-            <article className="card tile" key={project.title}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="pillRow">
-                {project.tags.map((tag) => (
-                  <Pill key={tag} text={tag} />
-                ))}
-              </div>
-            </article>
+        <div className="grid2">
+          {publicApps.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
       </section>
 
-      <section id="dashboards" className="wrap sectionBlock">
+      <section id="data-science" className="wrap sectionBlock">
         <div className="sectionHead">
-          <h2>Dashboards and analyses</h2>
-          <p>This section is built for the shareable work you want recruiters and hiring managers to see.</p>
+          <h2>Data science projects</h2>
+          <p>Public-facing analytics case studies built around business problems that match my professional background.</p>
+        </div>
+        <div className="grid3">
+          {dataScienceProjects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="wrap sectionBlock">
+        <div className="sectionHead">
+          <h2>What&apos;s coming next</h2>
+          <p>The fastest way to strengthen this portfolio is to replace planned project cards with real artifacts.</p>
         </div>
         <div className="grid2">
           <div className="card tile">
-            <h3>Tableau dashboard showcase</h3>
-            <p>
-              Add screenshots, public Tableau links, or short case-study writeups here. This is one of your strongest differentiators, so it should be front and center.
-            </p>
-            <div className="placeholder">
-              Add: public Tableau dashboard link, screenshot gallery, short business problem + outcome.
-            </div>
+            <h3>Visual proof</h3>
+            <p>Add screenshots for Stupid Small and Niner, plus one polished visual per data science project.</p>
+            <div className="placeholder">Next up: app screenshots, charts, dashboard images, and short outcome summaries.</div>
           </div>
           <div className="card tile">
-            <h3>Apps and side projects</h3>
-            <p>
-              Current public-facing projects include <strong>Stupid Small</strong>, an Android productivity app that uses AI to turn overwhelming tasks into manageable next steps, and <strong>Niner</strong>, a polished native Sudoku app with multiple game modes, a daily streak puzzle, and a teaching hint engine.
-            </p>
-            <div className="placeholder">
-              Add next: live demos, screenshots, short writeups, and any public repos you want visible for Stupid Small and Niner.
-            </div>
+            <h3>Public data case studies</h3>
+            <p>Each project should include the business problem, dataset, method, key findings, and a short recommendation.</p>
+            <div className="placeholder">Next up: IBM Telco churn, loan default risk, and an A/B test analysis writeup.</div>
           </div>
         </div>
       </section>
@@ -226,7 +249,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="footer wrap">© Raymond Jack. Built as a portfolio site for resume and job search use.</footer>
+      <footer className="footer wrap">© Raymond Jack. Built with Next.js and shaped for data science and analytics roles.</footer>
     </main>
   )
 }
