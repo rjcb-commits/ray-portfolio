@@ -89,7 +89,11 @@ function ProjectCard({
 }) {
   return (
     <article className="card tile">
-      {image ? <img className="projectIcon" src={image} alt={`${title} icon`} /> : null}
+      {image ? (
+        <div className="projectIconFrame">
+          <img className="projectIcon" src={image} alt={`${title} icon`} />
+        </div>
+      ) : null}
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="pillRow">
