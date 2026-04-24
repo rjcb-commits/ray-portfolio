@@ -4,12 +4,14 @@ const publicApps = [
     description:
       'An Android app that defeats procrastination by using AI to break overwhelming tasks into stupidly small micro-steps, with a built-in focus timer, streak tracking, and celebration animations to keep users moving forward.',
     tags: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'Groq', 'Cloudflare Workers'],
+    image: '/stupid-small-icon.png',
   },
   {
     title: 'Niner',
     description:
       'A polished native Android Sudoku app with five difficulties, five game modes, a daily streak puzzle, and a teaching hint engine, all built end-to-end in Kotlin and Jetpack Compose.',
     tags: ['Kotlin', 'Jetpack Compose', 'StateFlow', 'Coroutines', 'Custom Canvas', 'On-device'],
+    image: '/niner-icon.png',
   },
 ]
 
@@ -74,9 +76,20 @@ function Pill({ text }: { text: string }) {
   return <span className="pill">{text}</span>
 }
 
-function ProjectCard({ title, description, tags }: { title: string; description: string; tags: string[] }) {
+function ProjectCard({
+  title,
+  description,
+  tags,
+  image,
+}: {
+  title: string
+  description: string
+  tags: string[]
+  image?: string
+}) {
   return (
     <article className="card tile">
+      {image ? <img className="projectIcon" src={image} alt={`${title} icon`} /> : null}
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="pillRow">
