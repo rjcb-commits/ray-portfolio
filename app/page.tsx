@@ -15,60 +15,42 @@ const publicApps = [
   },
 ]
 
-const dataScienceProjects = [
-  {
-    title: 'Customer Churn Prediction',
-    description:
-      'Planned portfolio project using public customer data to identify churn risk, compare baseline and tree-based models, and translate model output into retention recommendations.',
-    tags: ['Python', 'Pandas', 'Scikit-learn', 'Classification', 'Feature Importance'],
-  },
-  {
-    title: 'Loan Default Risk Modeling',
-    description:
-      'Planned public risk-modeling case study focused on class imbalance, model interpretability, and decision-oriented evaluation for lending-style workflows.',
-    tags: ['Python', 'Risk Analytics', 'ROC-AUC', 'Precision/Recall', 'Interpretability'],
-  },
-  {
-    title: 'A/B Test Analysis',
-    description:
-      'Planned experimentation case study focused on conversion lift, confidence intervals, practical significance, and clear recommendation writing for stakeholders.',
-    tags: ['Statistics', 'Experimentation', 'Hypothesis Testing', 'Business Analytics'],
-  },
-]
-
 const experience = [
   {
-    title: 'Data Scientist, AVP — PNC Financial Services',
-    meta: '2025 – Present',
+    title: 'Data Scientist, AVP',
+    org: 'PNC Financial Services',
+    meta: '2025 — Present',
     bullets: [
-      'Built predictive models and statistical frameworks to improve decision-making in regulated banking operations.',
-      'Designed analytical workflows to improve QA coverage, audit defensibility, and operational visibility.',
-      'Created executive-facing Tableau dashboards for monitoring trends, risk patterns, and team performance.',
+      'Build predictive models for operational decision-making in a regulated banking environment, owning the work end-to-end from problem framing to delivery.',
+      'Design sampling and review workflows that expand QA coverage while keeping process documentation audit-ready.',
+      'Build Tableau dashboards used by leadership to track operational trends, risk patterns, and team performance.',
     ],
   },
   {
-    title: 'Sr. Business Analytics Consultant, AVP — PNC Financial Services',
-    meta: '2022 – 2025',
+    title: 'Sr. Business Analytics Consultant, AVP',
+    org: 'PNC Financial Services',
+    meta: '2022 — 2025',
     bullets: [
-      'Led analytics initiatives supporting operational strategy across relationship operations.',
-      'Built complex SQL, Spark, and Hive pipelines in Cloudera environments.',
-      'Finished top 3 in enterprise-wide data science competitions in consecutive years.',
+      'Owned analytics for relationship-operations strategy, supporting decisions for line-of-business leaders.',
+      'Built SQL, Spark, and Hive pipelines in Cloudera that powered downstream reporting and modeling work.',
+      'Finished top 3 in enterprise-wide data science competitions two years in a row.',
     ],
   },
   {
-    title: 'Business Analytics Consultant and earlier roles — PNC Financial Services',
-    meta: '2017 – 2022 and prior',
+    title: 'Business Analytics Consultant and earlier roles',
+    org: 'PNC Financial Services',
+    meta: '2017 — 2022 and prior',
     bullets: [
-      'Moved from reporting and collections into full analytics ownership.',
-      'Automated manual Excel/VBA reporting into maintainable data workflows.',
-      'Built the analytics muscle from scratch in teams that previously did not have it.',
+      'Built the first analytics function on multiple teams that previously had none.',
+      'Replaced manual Excel/VBA reporting with automated, maintainable data workflows.',
+      'Grew from reporting and collections roles into full analytics ownership.',
     ],
   },
 ]
 
 const stacks = {
-  platforms: ['Python', 'SQL', 'PySpark', 'Hive', 'Teradata', 'Oracle'],
-  modeling: ['Scikit-learn', 'Classification', 'Sampling', 'Feature Engineering', 'A/B Testing'],
+  platforms: ['Python', 'SQL', 'PySpark', 'Hive', 'Teradata', 'Oracle', 'Jupyter', 'Git'],
+  modeling: ['Scikit-learn', 'XGBoost', 'LightGBM', 'Classification', 'Regression', 'Feature Engineering', 'A/B Testing', 'LLMs'],
   storytelling: ['Tableau', 'Executive Dashboards', 'Data Storytelling', 'Operations Metrics'],
 }
 
@@ -110,65 +92,55 @@ export default function HomePage() {
     <main>
       <div className="nav">
         <div className="wrap navInner">
-          <div className="brand">Raymond Jack</div>
+          <a href="#top" className="brand">Raymond Jack</a>
           <div className="navLinks">
-            <a href="#apps">Apps</a>
-            <a href="#data-science">Data Science</a>
+            <a href="#apps">Work</a>
             <a href="#experience">Experience</a>
+            <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
       </div>
 
-      <header className="hero wrap">
-        <div className="heroGrid">
-          <section>
-            <div className="eyebrow">Data Scientist • Banking Analytics • Tableau • Python • SQL</div>
-            <h1>I turn data into practical decisions, and I build products too.</h1>
-            <p className="lede">
-              I&apos;m Raymond Jack, a data scientist with deep experience in banking, analytics, risk-focused decision support, and executive-facing dashboards. This portfolio combines public app work with data science projects built to show how I approach real business problems.
-            </p>
-            <div className="ctaRow">
-              <a className="btn primary" href="#data-science">
-                View projects
-              </a>
-              <a className="btn secondary" href="mailto:rayjackcb@gmail.com">
-                Contact me
-              </a>
-              <a className="btn secondary" href="https://github.com/rjcb-commits/" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </div>
-          </section>
+      <header id="top" className="hero wrap">
+        <div className="eyebrow">Data Scientist · Banking Analytics</div>
+        <h1>I turn data into practical decisions — and I build products too.</h1>
+        <p className="lede">
+          Data scientist with deep experience in banking analytics, risk-focused decision support, and executive dashboards. This portfolio brings together public app work and the methods I use day-to-day.
+        </p>
+        <div className="ctaRow">
+          <a className="btn primary" href="#apps">
+            View work
+          </a>
+          <a className="btn secondary" href="mailto:rayjackcb@gmail.com">
+            Get in touch
+          </a>
+          <a className="btn secondary" href="https://github.com/rjcb-commits/" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
 
-          <aside className="card heroCard">
-            <h3>Quick snapshot</h3>
-            <div className="statGrid">
-              <div className="stat">
-                <strong>19</strong>
-                <span>years in banking and analytics</span>
-              </div>
-              <div className="stat">
-                <strong>Top 3</strong>
-                <span>enterprise modeling competition, 2 years in a row</span>
-              </div>
-              <div className="stat">
-                <strong>2 apps</strong>
-                <span>public product work already live in the portfolio</span>
-              </div>
-              <div className="stat">
-                <strong>3 planned DS projects</strong>
-                <span>public datasets focused on churn, risk, and experimentation</span>
-              </div>
-            </div>
-          </aside>
+        <div className="heroStats">
+          <div className="heroStat">
+            <strong>19</strong>
+            <span>years in banking and analytics</span>
+          </div>
+          <div className="heroStat">
+            <strong>Top 3</strong>
+            <span>enterprise modeling competition, two years running</span>
+          </div>
+          <div className="heroStat">
+            <strong>2</strong>
+            <span>shipped Android apps in the public store</span>
+          </div>
         </div>
       </header>
 
       <section id="apps" className="wrap sectionBlock">
         <div className="sectionHead">
+          <div className="sectionLabel">Work</div>
           <h2>Public apps</h2>
-          <p>Shipped projects that demonstrate product thinking, native app development, and execution.</p>
+          <p>Shipped projects that demonstrate product thinking, native development, and execution.</p>
         </div>
         <div className="grid2">
           {publicApps.map((project) => (
@@ -177,47 +149,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="data-science" className="wrap sectionBlock">
-        <div className="sectionHead">
-          <h2>Data science projects</h2>
-          <p>Public-facing analytics case studies built around business problems that match my professional background.</p>
-        </div>
-        <div className="grid3">
-          {dataScienceProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
-      </section>
-
-      <section className="wrap sectionBlock">
-        <div className="sectionHead">
-          <h2>What&apos;s coming next</h2>
-          <p>The fastest way to strengthen this portfolio is to replace planned project cards with real artifacts.</p>
-        </div>
-        <div className="grid2">
-          <div className="card tile">
-            <h3>Visual proof</h3>
-            <p>Add screenshots for Stupid Small and Niner, plus one polished visual per data science project.</p>
-            <div className="placeholder">Next up: app screenshots, charts, dashboard images, and short outcome summaries.</div>
-          </div>
-          <div className="card tile">
-            <h3>Public data case studies</h3>
-            <p>Each project should include the business problem, dataset, method, key findings, and a short recommendation.</p>
-            <div className="placeholder">Next up: IBM Telco churn, loan default risk, and an A/B test analysis writeup.</div>
-          </div>
-        </div>
-      </section>
-
       <section id="experience" className="wrap sectionBlock">
         <div className="sectionHead">
-          <h2>Experience highlights</h2>
+          <div className="sectionLabel">Experience</div>
+          <h2>Selected roles</h2>
           <p>The short version of the story behind the resume.</p>
         </div>
         <div className="timeline">
           {experience.map((item) => (
-            <div className="card timelineItem" key={item.title}>
-              <h3>{item.title}</h3>
-              <div className="meta">{item.meta}</div>
+            <div className="card timelineItem" key={item.title + item.meta}>
+              <div className="timelineHead">
+                <div>
+                  <h3>{item.title}</h3>
+                  <div className="org">{item.org}</div>
+                </div>
+                <div className="meta">{item.meta}</div>
+              </div>
               <ul>
                 {item.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
@@ -228,8 +175,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="wrap sectionBlock">
+      <section id="stack" className="wrap sectionBlock">
         <div className="sectionHead">
+          <div className="sectionLabel">Toolkit</div>
           <h2>Core stack</h2>
           <p>Tools and methods I use to move from raw data to business decisions.</p>
         </div>
@@ -250,10 +198,11 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="wrap sectionBlock contactBlock">
-        <div className="card tile">
-          <h2>Let&apos;s connect</h2>
+        <div className="contactCard">
+          <div className="sectionLabel">Contact</div>
+          <h2>Let&apos;s connect.</h2>
           <p>
-            If you&apos;re hiring for data science, analytics, decision science, risk, fraud, compliance, or business intelligence roles, I&apos;d love to talk.
+            If you&apos;re hiring for data science, analytics, decision science, risk, fraud, compliance, or business intelligence, I&apos;d love to talk.
           </p>
           <div className="ctaRow">
             <a className="btn primary" href="mailto:rayjackcb@gmail.com">
@@ -266,7 +215,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="footer wrap">© Raymond Jack. Built with Next.js and shaped for data science and analytics roles.</footer>
+      <footer className="footer wrap">
+        <div>© {new Date().getFullYear()} Raymond Jack</div>
+        <div className="footerMeta">Built with Next.js</div>
+      </footer>
     </main>
   )
 }
