@@ -1,5 +1,12 @@
 const publicApps = [
   {
+    title: 'Loan Default Predictor',
+    description:
+      'LightGBM model trained on the Lending Club dataset to predict loan default. Live Streamlit demo with sliders for borrower features and real-time scoring. AUC 0.71 on a held-out test set.',
+    tags: ['Python', 'LightGBM', 'scikit-learn', 'pandas', 'Streamlit'],
+    href: '/apps/loan-default',
+  },
+  {
     title: 'Stupid Small',
     description:
       'An Android app that defeats procrastination by using AI to break overwhelming tasks into stupidly small micro-steps. Focus timer, streak tracking, and celebration animations included.',
@@ -152,10 +159,10 @@ export default function HomePage() {
       <section id="apps" className="wrap sectionBlock">
         <div className="sectionHead">
           <div className="sectionLabel">Work</div>
-          <h2>Public apps</h2>
-          <p>Side projects shipped to the Play Store.</p>
+          <h2>Selected work</h2>
+          <p>A live ML demo plus two native Android apps.</p>
         </div>
-        <div className="grid2">
+        <div className="grid3">
           {publicApps.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
