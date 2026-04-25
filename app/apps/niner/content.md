@@ -179,20 +179,6 @@ Without a keystore, the release build fails loudly with `SigningConfig "release"
 
 ---
 
-## Privacy
-
-The full privacy policy is hosted at **https://niner-privacy.pages.dev/privacy**.
-
-The HTML source lives in [`docs/privacy.html`](docs/privacy.html). It's deployed to Cloudflare Pages with:
-
-```bash
-wrangler pages deploy docs --project-name=niner-privacy --branch=main
-```
-
-Short version: zero data collection, zero permissions, zero network calls. Everything stays on the device. Uninstalling the app removes all of it.
-
----
-
 ## Roadmap
 
 Things deferred for v1.x:
