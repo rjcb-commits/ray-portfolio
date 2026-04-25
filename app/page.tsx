@@ -5,6 +5,7 @@ const publicApps = [
       'An Android app that defeats procrastination by using AI to break overwhelming tasks into stupidly small micro-steps. Focus timer, streak tracking, and celebration animations included.',
     tags: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'Groq', 'Cloudflare Workers'],
     image: '/stupid-small-icon.png',
+    href: '/apps/stupid-small',
   },
   {
     title: 'Niner',
@@ -12,6 +13,7 @@ const publicApps = [
       'Native Android Sudoku app with five difficulties, five game modes, a daily streak puzzle, and a teaching hint engine.',
     tags: ['Kotlin', 'Jetpack Compose', 'StateFlow', 'Coroutines', 'Custom Canvas', 'On-device'],
     image: '/niner-icon.png',
+    href: '/apps/niner',
   },
 ]
 
@@ -63,14 +65,16 @@ function ProjectCard({
   description,
   tags,
   image,
+  href,
 }: {
   title: string
   description: string
   tags: string[]
   image?: string
+  href?: string
 }) {
-  return (
-    <article className="card tile">
+  const inner = (
+    <>
       {image ? (
         <div className="projectIconFrame">
           <img className="projectIcon" src={image} alt={`${title} icon`} />
@@ -83,8 +87,17 @@ function ProjectCard({
           <Pill key={tag} text={tag} />
         ))}
       </div>
-    </article>
+    </>
   )
+
+  if (href) {
+    return (
+      <a className="card tile projectCardLink" href={href}>
+        {inner}
+      </a>
+    )
+  }
+  return <article className="card tile">{inner}</article>
 }
 
 export default function HomePage() {
