@@ -192,7 +192,7 @@ Things deferred for v1.x:
 
 ## License
 
-[MIT](LICENSE) — feel free to fork, learn from, or remix.
+[MIT](https://github.com/rjcb-commits/niner_sudoku/blob/main/LICENSE) — feel free to fork, learn from, or remix.
 
 ---
 
