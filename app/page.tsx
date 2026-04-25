@@ -202,7 +202,7 @@ export default function HomePage() {
           <div className="sectionLabel">Contact</div>
           <h2>Let&apos;s connect.</h2>
           <p>
-            If you&apos;re hiring for data science, analytics, decision science, risk, fraud, compliance, or business intelligence, I&apos;d love to talk.
+            Open to interesting conversations — data science, banking analytics, product work, or anything in the same neighborhood. Reach out anytime.
           </p>
           <div className="ctaRow">
             <a className="btn primary" href="mailto:rayjackcb@gmail.com">
