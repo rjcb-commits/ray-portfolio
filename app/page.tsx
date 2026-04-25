@@ -53,7 +53,7 @@ const experience = [
 const stacks = {
   platforms: ['Python', 'SQL', 'PySpark', 'Hadoop', 'Spark', 'Hive', 'Cloudera', 'Teradata', 'Oracle', 'Oozie', 'Jupyter', 'GitHub', 'Cloudflare Workers'],
   modeling: ['XGBoost', 'LightGBM', 'Scikit-learn', 'Pandas', 'NumPy', 'Cox Proportional Hazards', 'Survival Analysis', 'Classification', 'Feature Engineering', 'Statistical Sampling', 'A/B Testing', 'NLP (TF-IDF)', 'LLMs'],
-  visualization: ['Tableau', 'Executive Dashboards', 'Operational Reporting'],
+  visualization: ['Tableau', 'matplotlib', 'seaborn', 'Excel', 'Executive Dashboards'],
 }
 
 function Pill({ text }: { text: string }) {
