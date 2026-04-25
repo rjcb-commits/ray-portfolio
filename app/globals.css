@@ -643,4 +643,80 @@ h3 {
   .meta {
     white-space: normal;
   }
+  .appPageHeader {
+    padding: 18px 0;
+  }
+  .prose {
+    padding: 16px 0 48px;
+  }
+  .prose h2 {
+    margin-top: 40px;
+  }
+  /* 4-screenshot rows in READMEs render too thin on tablet/mobile — wrap 2x2 */
+  .prose p[align="center"] img[width="22%"] {
+    width: 47%;
+    margin: 4px 2px;
+  }
+  /* Tables get a horizontal scroll instead of overflowing */
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: clamp(30px, 9vw, 44px);
+  }
+  .lede {
+    font-size: 16px;
+  }
+  .heroStat strong {
+    font-size: 28px;
+  }
+  /* Nav links crowd the brand at this width — drop them, scroll handles navigation */
+  .navLinks {
+    display: none;
+  }
+  .hero {
+    padding: 48px 0 36px;
+  }
+  .sectionBlock {
+    padding: 36px 0;
+  }
+  .contactCard {
+    padding: 32px 20px;
+  }
+  .ctaRow {
+    margin-top: 24px;
+  }
+  .heroStats {
+    margin-top: 48px;
+    padding-top: 24px;
+  }
+  .tile {
+    padding: 20px;
+  }
+  .timelineItem {
+    padding: 20px;
+  }
+  .prose {
+    font-size: 15.5px;
+  }
+  .prose h1 {
+    font-size: clamp(28px, 9vw, 38px);
+  }
+  .prose h2 {
+    font-size: clamp(22px, 6vw, 28px);
+    margin-top: 32px;
+  }
+  .prose pre {
+    font-size: 12.5px;
+    padding: 14px 16px;
+  }
+  .repoLink {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
