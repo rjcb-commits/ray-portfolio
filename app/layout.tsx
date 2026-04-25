@@ -18,11 +18,11 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'Raymond Jack — Data Scientist',
   description:
-    'Data scientist with 19 years in banking analytics. Predictive modeling, decision support, and executive dashboards. Public app work and case studies.',
+    'Data scientist at a top-10 US bank, building production ML for Reg-E and Reg-Z dispute analytics and the Tableau dashboards leadership uses to track operational risk. Side projects in Android.',
   openGraph: {
     title: 'Raymond Jack — Data Scientist',
     description:
-      'Data scientist with 19 years in banking analytics. Predictive modeling, decision support, and executive dashboards.',
+      'Data scientist at a top-10 US bank, building production ML for Reg-E and Reg-Z dispute analytics and the Tableau dashboards leadership uses to track operational risk.',
     type: 'website',
   },
   icons: {

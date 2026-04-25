@@ -21,9 +21,9 @@ const experience = [
     org: 'PNC Financial Services',
     meta: '2025 — Present',
     bullets: [
-      'Build predictive models for operational decision-making in a regulated banking environment, owning the work end-to-end from problem framing to delivery.',
-      'Design sampling and review workflows that expand QA coverage while keeping process documentation audit-ready.',
-      'Build Tableau dashboards used by leadership to track operational trends, risk patterns, and team performance.',
+      'Built an XGBoost system that catches Reg-E debit card dispute errors 10x more often than random sampling, taken through MRM validation, production deployment, and Tableau monitoring.',
+      'Built the case-sampling tool QA reviewers use day to day; model scores drive risk-targeted review with a random control sample for ongoing validation.',
+      'Build Tableau dashboards leadership uses to track dispute error trends and team performance.',
     ],
   },
   {
@@ -32,8 +32,8 @@ const experience = [
     meta: '2022 — 2025',
     bullets: [
       'Owned analytics for relationship-operations strategy, supporting decisions for line-of-business leaders.',
-      'Built SQL, Spark, and Hive pipelines in Cloudera that powered downstream reporting and modeling work.',
-      'Finished top 3 in enterprise-wide data science competitions two years in a row.',
+      'Built SQL, PySpark, and Hive pipelines on Cloudera, orchestrated with Oozie, that fed downstream reporting and modeling work.',
+      'Top 3, two years running, in PNC\'s enterprise data science competition: multi-class LightGBM (2024), Cox proportional hazards survival model (2025).',
     ],
   },
   {
@@ -42,16 +42,16 @@ const experience = [
     meta: '2017 — 2022 and prior',
     bullets: [
       'Built the first analytics function on multiple teams that previously had none.',
-      'Replaced manual Excel/VBA reporting with automated, maintainable data workflows.',
+      'Replaced legacy Excel/VBA reporting with Python and SQL pipelines.',
       'Grew from reporting and collections roles into full analytics ownership.',
     ],
   },
 ]
 
 const stacks = {
-  platforms: ['Python', 'SQL', 'PySpark', 'Hive', 'Teradata', 'Oracle', 'Jupyter', 'Git'],
-  modeling: ['Scikit-learn', 'XGBoost', 'LightGBM', 'Classification', 'Regression', 'Feature Engineering', 'A/B Testing', 'LLMs'],
-  storytelling: ['Tableau', 'Executive Dashboards', 'Data Storytelling', 'Operations Metrics'],
+  platforms: ['Python', 'SQL', 'PySpark', 'Hadoop', 'Spark', 'Hive', 'Cloudera', 'Teradata', 'Oracle', 'Oozie', 'Jupyter', 'GitHub', 'Cloudflare Workers'],
+  modeling: ['XGBoost', 'LightGBM', 'Scikit-learn', 'Pandas', 'NumPy', 'Cox Proportional Hazards', 'Survival Analysis', 'Classification', 'Feature Engineering', 'Statistical Sampling', 'A/B Testing', 'NLP (TF-IDF)', 'LLMs'],
+  visualization: ['Tableau', 'Executive Dashboards', 'Operational Reporting'],
 }
 
 function Pill({ text }: { text: string }) {
@@ -191,8 +191,8 @@ export default function HomePage() {
             <div className="pillRow">{stacks.modeling.map((item) => <Pill key={item} text={item} />)}</div>
           </div>
           <div className="card tile">
-            <h3>Visualization and storytelling</h3>
-            <div className="pillRow">{stacks.storytelling.map((item) => <Pill key={item} text={item} />)}</div>
+            <h3>Visualization</h3>
+            <div className="pillRow">{stacks.visualization.map((item) => <Pill key={item} text={item} />)}</div>
           </div>
         </div>
       </section>
