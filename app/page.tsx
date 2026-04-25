@@ -2,14 +2,14 @@ const publicApps = [
   {
     title: 'Stupid Small',
     description:
-      'An Android app that defeats procrastination by using AI to break overwhelming tasks into stupidly small micro-steps, with a built-in focus timer, streak tracking, and celebration animations to keep users moving forward.',
+      'An Android app that defeats procrastination by using AI to break overwhelming tasks into stupidly small micro-steps. Focus timer, streak tracking, and celebration animations included.',
     tags: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'Groq', 'Cloudflare Workers'],
     image: '/stupid-small-icon.png',
   },
   {
     title: 'Niner',
     description:
-      'A polished native Android Sudoku app with five difficulties, five game modes, a daily streak puzzle, and a teaching hint engine, all built end-to-end in Kotlin and Jetpack Compose.',
+      'Native Android Sudoku app with five difficulties, five game modes, a daily streak puzzle, and a teaching hint engine.',
     tags: ['Kotlin', 'Jetpack Compose', 'StateFlow', 'Coroutines', 'Custom Canvas', 'On-device'],
     image: '/niner-icon.png',
   },
@@ -103,10 +103,10 @@ export default function HomePage() {
       </div>
 
       <header id="top" className="hero wrap">
-        <div className="eyebrow">Data Scientist · Banking Analytics</div>
-        <h1>I turn data into practical decisions — and I build products too.</h1>
+        <div className="eyebrow">Data Scientist · Applied ML & Analytics</div>
+        <h1>Production ML for regulated banking. Two Android apps on the side.</h1>
         <p className="lede">
-          Data scientist with deep experience in banking analytics, risk-focused decision support, and executive dashboards. This portfolio brings together public app work and the methods I use day-to-day.
+          Data scientist at a top-10 US bank. I build production models for Reg-E and Reg-Z dispute analytics and the Tableau dashboards leadership uses to track operational risk. Android apps in my spare time.
         </p>
         <div className="ctaRow">
           <a className="btn primary" href="#apps">
@@ -140,7 +140,7 @@ export default function HomePage() {
         <div className="sectionHead">
           <div className="sectionLabel">Work</div>
           <h2>Public apps</h2>
-          <p>Shipped projects that demonstrate product thinking, native development, and execution.</p>
+          <p>Side projects shipped to the Play Store.</p>
         </div>
         <div className="grid2">
           {publicApps.map((project) => (
@@ -202,7 +202,7 @@ export default function HomePage() {
           <div className="sectionLabel">Contact</div>
           <h2>Let&apos;s connect.</h2>
           <p>
-            Open to interesting conversations — data science, banking analytics, product work, or anything in the same neighborhood. Reach out anytime.
+            Always up for a conversation about data science, banking analytics, or product work. Reach out anytime.
           </p>
           <div className="ctaRow">
             <a className="btn primary" href="mailto:rayjackcb@gmail.com">
